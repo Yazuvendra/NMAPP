@@ -23,7 +23,7 @@ app.use(express.static(__dirname + '/views'));
 //Store all JS and CSS in Scripts folder.
 app.use('/', product);
 
-var port = 1234;
+var port = process.env.PORT || 8080;
 
 app.listen(port, () => {
     console.log('Server is up and running on port numner ' + port);
